@@ -1,39 +1,43 @@
 {
-    "name": "bootstrap-fileinput",
-    "version": "4.4.6",
-    "homepage": "https://github.com/kartik-v/bootstrap-fileinput",
-    "authors": [
-        "Kartik Visweswaran <kartikv2@gmail.com>"
-    ],
-    "description": "An enhanced HTML 5 file input for Bootstrap 3.x with file preview, multiple selection, ajax uploads, and more features.",
-    "repository" : {
-        "type": "git", 
-        "url": "https://github.com/kartik-v/bootstrap-fileinput.git"
-    },
-    "bugs": {
-        "url": "https://github.com/kartik-v/bootstrap-fileinput/issues"
-    },
+    "title": "Grayscale",
+    "name": "startbootstrap-grayscale",
+    "version": "4.1.1",
+    "description": "A grayscale one page HTML theme for Bootstrap.",
     "keywords": [
-        "file",
-        "input",
-        "preview",
-        "image",
-        "upload",
-        "ajax",
-        "multiple",
-        "delete",
-        "progress",
-        "gallery"
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
     ],
+    "homepage": "https://startbootstrap.com/template-overviews/grayscale",
+    "bugs": {
+        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
+        "email": "feedback@startbootstrap.com"
+    },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (http://davidmiller.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+    },
     "dependencies": {
-        "jquery": ">= 1.9.0",
-        "bootstrap": ">= 3.0.0"
+        "bootstrap": "4.1.1",
+        "font-awesome": "4.7.0",
+        "jquery": "3.3.1",
+        "jquery.easing": "^1.4.1"
     },
-    "main": "./js/fileinput.js",
-    "style": "./css/fileinput.css",
-    "peerDependencies": {
-        "jquery": ">= 1.9.0",
-        "bootstrap": ">= 3.0.0"
-    },
-    "license": "BSD-3-Clause"
+    "devDependencies": {
+        "browser-sync": "2.24.3",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "3.9.4",
+        "gulp-header": "2.0.5",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "4.0.1",
+        "gulp-uglify": "3.0.0"
+    }
 }
