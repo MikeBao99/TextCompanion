@@ -92,17 +92,16 @@
                 </div>
               </div>
           </div>
-
-<div class="col-md-12 text-center top10"><h4>Overall Sentiment</h4></div>
-<div class="row"> <div class="col-md-4"></div><div class="col-md-4 top10"><canvas id="myChart" width="10" height="10"></canvas></div></div>
-
-<div class="row">
-    <div class="col-md-12 text-center top30">
+<div class = "row">
+    <div class="col-md-6 text-center top10"><h4>Overall Sentiment</h4></div>
+    <div class="col-md-6 text-center top30">
         <h4>Major Topics</h4>
     </div>
-    <div class = "col-md-12 text-center top10"><h6>{{topics|safe}}</h6></div>
-</div>
 
+    <div class="col-md-4 offset-md-1 top10"><canvas id="myChart" width="10" height="10"></canvas></div>
+
+    <div class = "col-md-4 offset-md-2 text-center top10"><h6>{{topics|safe}}</h6></div>
+</div>
 <script>
 var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
