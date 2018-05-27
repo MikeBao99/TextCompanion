@@ -1,7 +1,7 @@
 import json
 from watson_developer_cloud import ToneAnalyzerV3
 
-colors = {'Anger':'#FF8F8F', 'Confident':'#FFDB8F', 'Analytical':'#8FF6FF', 'Fear':'#8FFF99', 'Tentative':'#FF8FFB', 'Sadness':'#8FB6FF', 'Joy':'#FDFF8F'}
+colors = {'Anger':'#FFE0E6', 'Confident':'#FEE7C1', 'Analytical':'#EBE1FE', 'Fear':'#DCF2F2', 'Tentative':'#FFEEFE', 'Sadness':'#D8ECFA', 'Joy':'#FFF5DF'}
 
 def colorText(text):
   tone_analyzer = ToneAnalyzerV3(
