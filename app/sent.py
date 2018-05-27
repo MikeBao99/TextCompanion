@@ -13,12 +13,15 @@ def colorText(text):
 
   tone = tone_analyzer.tone({"text": text},content_type)
   ans = ""
-  for sentence in tone['sentences_tone']:
-    if len(sentence['tones']) > 0:
-      ans += colorSentence(sentence['text'], sentence['tones'][0]['tone_name'])
-    else:
-      ans += sentence['text']
-    ans+= ' '
+  try:
+    for sentence in tone['sentences_tone']:
+      if len(sentence['tones']) > 0:
+        ans += colorSentence(sentence['text'], sentence['tones'][0]['tone_name'])
+      else:
+        ans += sentence['text']
+      ans+= ' '
+  except:
+    ans = text
   return ans
 
 sents = ["Anger", "Sadness", "Joy", "Fear", "Analytical", "Confident", "Tentative"]
