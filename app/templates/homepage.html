@@ -3,14 +3,20 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
-<div>
-  <form>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
+
+
+<div class="text-center">
+  <h2>Select your file</h2>
+  <form enctype="multipart/form-data" action="/" method="post">
+    <input id="input-b1" name="input-b1" type="file" class="file">
+
+
+    <button type="submit" class="btn btn-default top10">Submit</button>
   </form>
-</div>>
+</div>
+<div class="text-center">
+  <h3>{{WordCount|safe}}</h3>
+</div>
 
 
 {% endblock %}

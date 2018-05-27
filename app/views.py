@@ -17,7 +17,7 @@ def file_allowed(file):
 @views.route('/', methods=["GET", "POST"])
 def homepage():
 	if request.method == "POST":
-		return render_template('homepage.html', WordCount = requests.arg[0])
+		return render_template('homepage.html', WordCount = request.form.get("emailtext"))
 	else:
 		return render_template('homepage.html', WordCount = "")
 
