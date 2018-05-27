@@ -37,7 +37,7 @@ def homepage():
 		content = '<table class="table table-hover table-bordered text-center thead-light"><thead><tr><th>Rank</th><th>Guess</th></tr></thead><tbody>'
 		return render_template('index.html', WordCount =  content + "<tr><td>1st Guess</td><td>" + classif[0] + "</td></tr><tr><td>2nd Guess</td><td>" + classif[1] + "</td></tr><tr><td>3rd Guess</td><td>" + classif[2] +  "</td></tr></tbody></table>")
 	else:
-		return render_template('index.html', WordCount = "")
+		return render_template('index.html')
 
 
 
