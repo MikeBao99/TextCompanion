@@ -1,5 +1,17 @@
 import json
 from watson_developer_cloud import ToneAnalyzerV3
+import textrazor
+
+def analyzeText(text):
+  textrazor.api_key = "b695217cdaeb234d8a4edd867e1ab59b23aa1d050fa063c5f4a3a89a"
+  client = textrazor.TextRazor(extractors=["topics"])
+  response = client.analyze(text)
+  topic = map(lambda x: str(x.label), response.topics()[:5])
+  ans = ""
+  for topica in topic:
+    ans += topica + "\n"
+  return ans
+
 
 colors = {'Anger':'#FFE0E6', 'Confident':'#FEE7C1', 'Analytical':'#EBE1FE', 'Fear':'#DCF2F2', 'Tentative':'#FFEEFE', 'Sadness':'#D8ECFA', 'Joy':'#FFF5DF'}
 
