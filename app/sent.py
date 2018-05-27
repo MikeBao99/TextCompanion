@@ -13,7 +13,7 @@ def analyzeText(text):
   return ans
 
 
-colors = {'Anger':'#FFE0E6', 'Confident':'#FEE7C1', 'Analytical':'#EBE1FE', 'Fear':'#DCF2F2', 'Tentative':'#FFEEFE', 'Sadness':'#D8ECFA', 'Joy':'#FFF5DF'}
+colors = {'Anger':'#FFE0E6', 'Confident':'#F1DED3', 'Analytical':'#EBE1FE', 'Fear':'#DCF2F2', 'Tentative':'#FFEEFE', 'Sadness':'#D8ECFA', 'Joy':'#FFF5DF'}
 
 def colorText(text):
   tone_analyzer = ToneAnalyzerV3(
