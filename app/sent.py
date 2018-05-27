@@ -6,7 +6,7 @@ def analyzeText(text):
   textrazor.api_key = "b695217cdaeb234d8a4edd867e1ab59b23aa1d050fa063c5f4a3a89a"
   client = textrazor.TextRazor(extractors=["topics"])
   response = client.analyze(text)
-  topic = map(lambda x: str(x.label), response.topics()[:5])
+  topic = map(lambda x: str(x.label), response.topics()[:8])
   ans = ""
   for topica in topic:
     ans += topica + "</h6> <h6>"
