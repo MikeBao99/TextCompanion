@@ -9,7 +9,7 @@ def analyzeText(text):
   topic = map(lambda x: str(x.label), response.topics()[:5])
   ans = ""
   for topica in topic:
-    ans += topica + "\n"
+    ans += topica + "</h6> <h6>"
   return ans
 
 
