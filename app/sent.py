@@ -35,10 +35,13 @@ def sentList(text):
 
   tone = tone_analyzer.tone({"text": text},content_type)
   sentiments = [0,0,0,0,0,0,0]
-  for sentiment in range(len(sents)):
-    for senti in tone['document_tone']['tones']:
-      if senti['tone_name'] == sents[sentiment]:
-        sentiments[sentiment] = senti['score']
+  try:
+    for sentiment in range(len(sents)):
+      for senti in tone['document_tone']['tones']:
+        if senti['tone_name'] == sents[sentiment]:
+          sentiments[sentiment] = senti['score']
+  except:
+    sentiments = [0,0,0,0,0,0,0]
   return sentiments
 
 def colorSentence(sentence, emotion):
