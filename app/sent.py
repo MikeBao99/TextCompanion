@@ -21,5 +21,22 @@ def colorText(text):
     ans+= ' '
   return ans
 
+sents = ["Anger", "Sadness", "Joy", "Fear", "Analytical", "Confident", "Tentative"]
+def sentList(text):
+  tone_analyzer = ToneAnalyzerV3(
+      version ='2017-09-21',
+      username ='f163ce1a-be0a-4dd8-93f8-17b1b02cc209',
+      password ='OUcpFH7JH8rT'
+  )
+  content_type = 'application/json'
+
+  tone = tone_analyzer.tone({"text": text},content_type)
+  sentiments = [0,0,0,0,0,0,0]
+  for sentiment in range(len(sents)):
+    for senti in tone['document_tone']['tones']:
+      if senti['tone_name'] == sents[sentiment]:
+        sentiments[sentiment] = senti['score']
+  return sentiments
+
 def colorSentence(sentence, emotion):
 	return('<FONT style=\"BACKGROUND-COLOR: ' + colors[emotion] + '\">' + sentence + "</FONT>")
