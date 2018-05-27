@@ -12,14 +12,14 @@ def colorText(text):
   content_type = 'application/json'
 
   tone = tone_analyzer.tone({"text": text},content_type)
-  ans = "<p>"
+  ans = ""
   for sentence in tone['sentences_tone']:
     if len(sentence['tones']) > 0:
       ans += colorSentence(sentence['text'], sentence['tones'][0]['tone_name'])
     else:
       ans += sentence['text']
     ans+= ' '
-  return (ans + '</p>')
+  return ans
 
 def colorSentence(sentence, emotion):
 	return('<FONT style=\"BACKGROUND-COLOR: ' + colors[emotion] + '\">' + sentence + "</FONT>")
