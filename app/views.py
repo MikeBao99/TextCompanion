@@ -5,6 +5,7 @@ import json
 import urllib
 from werkzeug import * #TODO: actually look at imports
 import classify as watson
+import sent
 
 views = Blueprint('views', __name__)
 
@@ -17,7 +18,7 @@ def file_allowed(file):
 @views.route('/', methods=["GET", "POST"])
 def homepage():
 	if request.method == "POST":
-		return render_template('homepage.html', WordCount = request.form.get("emailtext"))
+		return render_template('homepage.html', WordCount = sent.colorText(request.form.get("emailtext")))
 	else:
 		return render_template('homepage.html', WordCount = "")
 
