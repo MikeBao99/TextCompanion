@@ -19,7 +19,7 @@ def colorText(text):
     else:
       ans += sentence['text']
     ans+= ' '
-  return ans += '</p>'
+  return (ans + '</p>')
 
 def colorSentence(sentence, emotion):
 	return('<FONT style=\"BACKGROUND-COLOR: ' + colors[emotion] + '\">' + sentence + "</FONT>")
